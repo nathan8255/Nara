@@ -10,6 +10,7 @@ public class Curser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.SetResolution(1280, 720, false);
         Cursor.SetCursor(capyPaw, Vector2.zero, CursorMode.ForceSoftware);
     }
 }

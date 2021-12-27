@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text actorName;
     public Text messageText;
     public RectTransform backgroundBox;
+    public GameObject inventory;
 
     Message[] currentMessages;
     int activeMessage = 0;
@@ -18,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     public void OpenDialogue(Message[] messages)
     {
         //resets all appropriate variables upon the start of a new dialogue
+        inventory.SetActive(false);
         currentMessages = messages;
         activeMessage = 0;
         isActive = true;
@@ -33,11 +35,9 @@ public class DialogueManager : MonoBehaviour
         Message messageToDisplay = currentMessages[activeMessage];
         //all unused values in the messages array are set to "", "" - this checks if the current message is empty and ends the dialogue if it is
         if (messageToDisplay.message.Equals("")) {
-            //TESTING
-            //DialogueTrigger.dialogueSelect = 2;
-            //TESTING
             Debug.Log("Conversation ended.");
             isActive = false;
+            inventory.SetActive(true);
             //makes the UI invisible
             backgroundBox.transform.localScale = Vector3.zero;
         }
@@ -59,11 +59,9 @@ public class DialogueManager : MonoBehaviour
         }
         else 
         {
-            //TESTING
-            //DialogueTrigger.dialogueSelect = 2;
-            //TESTING
             Debug.Log("Conversation ended.");
             isActive = false;
+            inventory.SetActive(true);
             //makes the UI invisible
             backgroundBox.transform.localScale = Vector3.zero;
         }
@@ -74,6 +72,7 @@ public class DialogueManager : MonoBehaviour
     {
         //makes the UI invisible
         backgroundBox.transform.localScale = Vector3.zero;
+        inventory.SetActive(true);
     }
 
     // Update is called once per frame
