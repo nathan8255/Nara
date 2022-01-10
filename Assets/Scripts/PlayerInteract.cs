@@ -7,10 +7,14 @@ public class PlayerInteract : MonoBehaviour
     public GameObject currentObject = null;
     public InteractableObject currentInterScript = null;
     public Inventory inventory;
+    public PassTransfer passTransfer;
+    public GameObject inputField;
+
+    public bool ifPass = false;
 
     void Update()
     {
-        if (Input.GetButtonDown ("Interact") && currentObject)
+        if (Input.GetButtonDown ("Interact") && currentObject && !ifPass)
         {
             /*
              * set up a shit ton of bools
@@ -79,7 +83,7 @@ public class PlayerInteract : MonoBehaviour
                             inventory.AddItem(currentInterScript.itemGiven2);
                         }
                     } else {
-                        //if locked1 is true and the item was not found run default dialogue
+                        //if locked2 is true and the item was not found run default dialogue
                         currentInterScript.Open(4);
                         Debug.Log(currentObject.name + " was not unlocked, " + currentInterScript.itemNeeded2.name + " needed");
                     }
@@ -108,8 +112,26 @@ public class PlayerInteract : MonoBehaviour
                     }
                 }
             }
+            else if (currentInterScript.password)
+            {
+                if (currentInterScript.locked1)
+                {
+                    ifPass = true;
+                    currentInterScript.Open(0);
+                    inputField.SetActive(true);
+                }
+                else
+                {
+                    currentInterScript.Open(4);
+                }
+            }
             currentObject.SendMessage("DoInteraction");
         }
+    }
+
+    void Start()
+    {
+        inputField.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)

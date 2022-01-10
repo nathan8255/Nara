@@ -67,6 +67,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    //ends dialogue
+    public void End()
+    {
+        Debug.Log("Conversation ended.");
+        isActive = false;
+        inventory.SetActive(true);
+        //makes the UI invisible
+        backgroundBox.transform.localScale = Vector3.zero;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

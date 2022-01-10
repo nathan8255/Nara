@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //if the player is currently in a dialogue interaction don't let them move capy around
-        if (DialogueManager.isActive) return;
+        if (DialogueManager.isActive || FindObjectOfType<PlayerInteract>().ifPass) return;
 
         //checks which direction player is facing and flips appropriatly depending on which direction was pressed
         float h = Input.GetAxis("Horizontal");

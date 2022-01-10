@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     public Message[] messages;
     public Animator animator;
     public InteractableObject currentInterScript;
+    public GameObject inputField;
 
     public void StartDialogue(string name, int select)
     {
@@ -160,12 +161,46 @@ public class DialogueTrigger : MonoBehaviour
         }
         else if (name.Equals("Broken Door"))
         {
-            temp0.name = "Capy";
-            temp0.message = "Oops.";
-            messages[0] = temp0;
-            //set the message after this dialogue is completed to nothing to stop dialogue at right place
-            temp1.message = "";
-            messages[1] = temp1;
+            if (select == 0)
+            {
+                FindObjectOfType<DialogueManager>().End();
+                temp0.name = "Capy";
+                temp0.message = "Looks like I need a password.";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp1.message = "";
+                messages[1] = temp1;
+            }
+            else if (select == 1)
+            {
+                FindObjectOfType<DialogueManager>().End();
+                temp0.name = "Capy";
+                temp0.message = "Wow it opened.";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp1.message = "";
+                messages[1] = temp1;
+            }
+            else if (select == 4)
+            {
+                FindObjectOfType<DialogueManager>().End();
+                temp0.name = "Capy";
+                temp0.message = "Door is open now.";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp1.message = "";
+                messages[1] = temp1;
+            }
+            else if (select == 10)
+            {
+                FindObjectOfType<DialogueManager>().End();
+                temp0.name = " ";
+                temp0.message = "The door doesn't budge, the password must be something else.";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp1.message = "";
+                messages[1] = temp1;
+            }
         }
         else if (select == 100)
         {

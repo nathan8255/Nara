@@ -18,6 +18,10 @@ public class InteractableObject : MonoBehaviour
     public bool gives3;
     //if true there's dialogue associated with the item (and nothing else)
     public bool ifDialogue;
+    //if true a password is needed to interact with this item
+    public bool password;
+    //correct password 
+    public string correctPass;
     //item(s) needed to interact with this item
     public GameObject itemNeeded1 = null;
     public GameObject itemNeeded2 = null;
