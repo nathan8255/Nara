@@ -83,7 +83,7 @@ public class DialogueTrigger : MonoBehaviour
             }
             else if (select == 2)
             {
-                animator.SetTrigger("Stare");
+                animator.SetTrigger("Math");
                 temp0.name = "Vendy";
                 temp0.message = "Nathan has yet to write this interaction (you have Coin2).";
                 messages[0] = temp0;

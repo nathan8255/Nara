@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 4362f99576767cc47bb3b7c6ea9c50a7
+guid: fbe1ab928edf4c24da532b45d0bef57b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3086164812586684332
-    second: vmachine_ss_0
+      213: 8265045834036228682
+    second: VendingMachine_0
   - first:
-      213: 6187188383641203566
-    second: vmachine_ss_1
+      213: -7095097463981226713
+    second: VendingMachine_1
   - first:
-      213: 9066318591114875062
-    second: vmachine_ss_2
+      213: -5872275606889041824
+    second: VendingMachine_2
   - first:
-      213: 8004047223484298517
-    second: vmachine_ss_3
+      213: 6754790859930108749
+    second: VendingMachine_3
+  - first:
+      213: 881297774068237510
+    second: VendingMachine_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vmachine_ss_0
+      name: VendingMachine_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +120,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caf0a8cbb8244da20800000000000000
-      internalID: 3086164812586684332
+      spriteID: a423d0e556753b270800000000000000
+      internalID: 8265045834036228682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vmachine_ss_1
+      name: VendingMachine_1
       rect:
         serializedVersion: 2
         x: 150
@@ -138,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e637b55cd0f4dd550800000000000000
-      internalID: 6187188383641203566
+      spriteID: 725cf9ca276298d90800000000000000
+      internalID: -7095097463981226713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vmachine_ss_2
+      name: VendingMachine_2
       rect:
         serializedVersion: 2
         x: 300
@@ -159,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b01ce329b802dd70800000000000000
-      internalID: 9066318591114875062
+      spriteID: 060ff2cb27c718ea0800000000000000
+      internalID: -5872275606889041824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vmachine_ss_3
+      name: VendingMachine_3
       rect:
         serializedVersion: 2
         x: 450
@@ -180,8 +183,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515bb31ea86141f60800000000000000
-      internalID: 8004047223484298517
+      spriteID: d43803aaf76ddbd50800000000000000
+      internalID: 6754790859930108749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VendingMachine_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c40eacf7affa3c00800000000000000
+      internalID: 881297774068237510
       vertices: []
       indices: 
       edges: []
