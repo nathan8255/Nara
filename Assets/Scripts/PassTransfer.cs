@@ -8,7 +8,6 @@ public class PassTransfer : MonoBehaviour
     public string input;
     public GameObject canvas;
     public GameObject inputField;
-    public GameObject display;
     public PlayerInteract playerInteract;
 
     public void StoreInput()
@@ -30,6 +29,7 @@ public class PassTransfer : MonoBehaviour
 
     public void Exit()
     {
+        FindObjectOfType<DialogueManager>().End();
         input = "";
         canvas.SetActive(false);
         playerInteract.ifPass = false;
@@ -37,6 +37,7 @@ public class PassTransfer : MonoBehaviour
 
     public bool IsCorrect(string correct)
     {
+        input = input.Replace(" ", "");
         return correct.Equals(input);
     }
 }
