@@ -19,6 +19,11 @@ public class PassTransfer : MonoBehaviour
             playerInteract.ifPass = false;
             canvas.SetActive(false);
             playerInteract.currentInterScript.Open(1);
+
+            if (playerInteract.currentInterScript.gives1)
+            {
+                playerInteract.inventory.AddItem(playerInteract.currentInterScript.itemGiven1);
+            }
         }
         else
         {

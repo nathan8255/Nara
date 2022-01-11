@@ -66,7 +66,7 @@ public class DialogueTrigger : MonoBehaviour
                 temp3.message = "...fine. Make sure to stock orange juice next time.";
                 messages[3] = temp3;
                 temp4.name = "Vendy";
-                temp4.message = "How lovely! Please insert your coin so I can thank you for your service properly :D";
+                temp4.message = "How lovely! Please insert your coin so I can thank you for your service properly!!";
                 messages[4] = temp4;
                 temp5.name = " ";
                 temp5.message = "Some grape juice falls down, but you her an odd clanging noise when it hits the floor.";
@@ -74,22 +74,77 @@ public class DialogueTrigger : MonoBehaviour
                 temp6.name = " ";
                 temp6.message = "Opening the can it smells just as bad as expected, but you find a key inside!";
                 messages[6] = temp6;
+                temp7.name = "Capy";
+                temp7.message = "That's great and all but why are these cans so abnormally large...";
+                messages[7] = temp7;
+                temp8.name = " ";
+                temp8.message = "You toss the foul can to the side and the key is added to your inventory.";
+                messages[8] = temp8;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place 
+                temp9.message = "";
+                messages[9] = temp9;
+            }
+            else if (select == 2)
+            {
+                animator.SetTrigger("Stare");
+                temp0.name = "Vendy";
+                temp0.message = "Is that a coin I see? If you'd like-";
+                messages[0] = temp0;
+                temp1.name = "Capy";
+                temp1.message = "AHEM!";
+                messages[1] = temp1;
+                temp2.name = "Capy";
+                temp2.message = "We've already been through this... just give me the can already.";
+                messages[2] = temp2;
+                temp3.name = "Vendy";
+                temp3.message = "Due to your loyalty to our services you have been granted an extra can! Please insert your coin to redeem this fantastic offer!";
+                messages[3] = temp3;
+                temp4.name = "Capy";
+                temp4.message = "What.";
+                messages[4] = temp4;
+                temp5.name = "Vendy";
+                temp5.message = "Please insert your coin to redeem this fantastic offer!";
+                messages[5] = temp5;
+                temp6.name = " ";
+                temp6.message = "Two cans of grape juice fall down. Ones the same as all the others but the other one...";
+                messages[6] = temp6;
                 temp7.name = " ";
-                temp7.message = "You toss the foul can to the side and the key is added to your inventory.";
+                temp7.message = "You toss the normal can to the side and place the other near Vendy.";
                 messages[7] = temp7;
                 //set the message after this dialogue is completed to nothing to stop dialogue at right place 
                 temp8.message = "";
                 messages[8] = temp8;
             }
-            else if (select == 2)
+            else if (select == 3)
             {
-                animator.SetTrigger("Math");
+                animator.SetTrigger("Capy");
                 temp0.name = "Vendy";
-                temp0.message = "Nathan has yet to write this interaction (you have Coin2).";
+                temp0.message = "Is that a coin I see? If you'd like some grape juice please-";
                 messages[0] = temp0;
-                //set the message after this dialogue is completed to nothing to stop dialogue at right place 
-                temp1.message = "";
+                temp1.name = "Vendy";
+                temp1.message = "If you'd like some grape juice please-";
                 messages[1] = temp1;
+                temp2.name = "Vendy";
+                temp2.message = "If you'd like some-";
+                messages[2] = temp2;
+                temp3.name = "Vendy";
+                temp3.message = "...";
+                messages[3] = temp3;
+                temp4.name = "Capy";
+                temp4.message = "Uhhhhhhh";
+                messages[4] = temp4;
+                temp5.name = "Capy";
+                temp5.message = "Guess I'll insert this coin??";
+                messages[5] = temp5;
+                temp6.name = " ";
+                temp6.message = "Against all odds a can of orange juice falls to the floor. You immediatly notice the strange... bulbus shape.";
+                messages[6] = temp6;
+                temp7.name = " ";
+                temp7.message = "Ignoring that for now you carefully place it down.";
+                messages[7] = temp7;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place 
+                temp8.message = "";
+                messages[8] = temp8;
             }
             else if (select == 4)
             {
@@ -105,10 +160,23 @@ public class DialogueTrigger : MonoBehaviour
             }
             else if (select == 5)
             {
+                animator.SetTrigger("Math");
                 temp0.name = "Vendy";
-                temp0.message = "Nathan has yet to write this interaction (you've already inserted Coin2 and don't have Coin3).";
+                temp0.message = "In order to retain customer enjoyment we at Grape Inc. have incorperated a puzzle into the loyalty offer!";
                 messages[0] = temp0;
+                temp1.name = "Vendy";
+                temp1.message = "Please use the hints on the screen to aid in your quest!";
+                messages[1] = temp1;
                 //set the message after this dialogue is completed to nothing to stop dialogue at right place 
+                temp2.message = "";
+                messages[2] = temp2;
+            }
+            else if (select == 6)
+            {
+                temp0.name = "Vendy";
+                temp0.message = "...";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
                 temp1.message = "";
                 messages[1] = temp1;
             }
@@ -161,11 +229,20 @@ public class DialogueTrigger : MonoBehaviour
         }
         else if (name.Equals("Broken Door"))
         {
+            temp0.name = "Capy";
+            temp0.message = "Oops.";
+            messages[0] = temp0;
+            //set the message after this dialogue is completed to nothing to stop dialogue at right place
+            temp1.message = "";
+            messages[1] = temp1;
+        }
+        else if (name.Equals("Passcode Can"))
+        {
             if (select == 0)
             {
                 FindObjectOfType<DialogueManager>().End();
                 temp0.name = "Capy";
-                temp0.message = "Looks like I need a password.";
+                temp0.message = "Looks like I need a password? For some reason? This is strange.";
                 messages[0] = temp0;
                 //set the message after this dialogue is completed to nothing to stop dialogue at right place
                 temp1.message = "";
@@ -175,32 +252,50 @@ public class DialogueTrigger : MonoBehaviour
             {
                 FindObjectOfType<DialogueManager>().End();
                 temp0.name = "Capy";
-                temp0.message = "Wow it opened.";
+                temp0.message = "Wow it actually opened.";
                 messages[0] = temp0;
-                //set the message after this dialogue is completed to nothing to stop dialogue at right place
-                temp1.message = "";
+                temp1.name = " ";
+                temp1.message = "Looking inside Capy finds a coin... a very sticky coin.";
                 messages[1] = temp1;
+                temp2.name = " ";
+                temp2.message = "Coin was added to inventory.";
+                messages[2] = temp2;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp3.message = "";
+                messages[3] = temp3;
             }
             else if (select == 4)
             {
                 FindObjectOfType<DialogueManager>().End();
                 temp0.name = "Capy";
-                temp0.message = "Door is open now.";
+                temp0.message = "This smells even worse than the box.";
                 messages[0] = temp0;
-                //set the message after this dialogue is completed to nothing to stop dialogue at right place
-                temp1.message = "";
+                temp1.name = "Capy";
+                temp1.message = "How is that even possible...";
                 messages[1] = temp1;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp2.message = "";
+                messages[2] = temp2;
             }
             else if (select == 10)
             {
                 FindObjectOfType<DialogueManager>().End();
                 temp0.name = " ";
-                temp0.message = "The door doesn't budge, the password must be something else.";
+                temp0.message = "Nothing happens, the password must be something else.";
                 messages[0] = temp0;
                 //set the message after this dialogue is completed to nothing to stop dialogue at right place
                 temp1.message = "";
                 messages[1] = temp1;
             }
+        }
+        else if (name.Equals("Orange Can"))
+        {
+            temp0.name = " ";
+            temp0.message = "Congrats you won yeah orange in can and stuff (we haven't made a win screen yet...)";
+            messages[0] = temp0;
+            //set the message after this dialogue is completed to nothing to stop dialogue at right place 
+            temp1.message = "";
+            messages[1] = temp1;
         }
         else if (select == 100)
         {
