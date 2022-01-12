@@ -17,7 +17,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //if the player is currently in a dialogue interaction don't let them move capy around
-        if (DialogueManager.isActive || FindObjectOfType<PlayerInteract>().ifPass) return;
+        if (DialogueManager.isActive || FindObjectOfType<PlayerInteract>().ifPass)
+        {
+            
+            return;
+        }
 
         //checks which direction player is facing and flips appropriatly depending on which direction was pressed
         float h = Input.GetAxis("Horizontal");
@@ -41,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if the player is currently in a dialogue interaction don't let them move capy around
-        if (DialogueManager.isActive) return;
-        rb.velocity = movement * moveSpeed;
+        //if the player is currently in a dialogue interaction, stop capy and don't let them move capy around
+        if (DialogueManager.isActive) rb.velocity = movement*0;
+        else rb.velocity = movement * moveSpeed;
     }
 
     void MovementInput()

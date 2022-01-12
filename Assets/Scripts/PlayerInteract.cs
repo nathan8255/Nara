@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerInteract : MonoBehaviour
     public Inventory inventory;
     public PassTransfer passTransfer;
     public GameObject inputField;
+    public InputField inputFieldText;
 
     public bool ifPass = false;
 
@@ -38,6 +40,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 inventory.AddItem(currentObject);
             }
+
 
             //check if the object can be opened or has a special interaction
             if (currentInterScript.openable)
@@ -113,12 +116,12 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
             else if (currentInterScript.password)
+                //if password is true
             {
                 if (currentInterScript.locked1)
                 {
-                    ifPass = true;
+                    //if locked1 is true, meaning password hasn't been inputted yet, play default dialogue
                     currentInterScript.Open(0);
-                    inputField.SetActive(true);
                 }
                 else
                 {
@@ -127,6 +130,14 @@ public class PlayerInteract : MonoBehaviour
             }
             currentObject.SendMessage("DoInteraction");
         }
+    }
+
+    //DialogueManager calls this to open the Input UI 
+    public void OpenInputField() {
+        ifPass = true;
+        inputField.SetActive(true);
+        //automatically select the text in the input field when opened
+        inputFieldText.Select();
     }
 
     void Start()

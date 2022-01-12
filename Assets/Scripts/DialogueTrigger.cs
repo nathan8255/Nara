@@ -240,17 +240,18 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (select == 0)
             {
-                FindObjectOfType<DialogueManager>().End();
+                //FindObjectOfType<DialogueManager>().End();
                 temp0.name = "Capy";
                 temp0.message = "Looks like I need a password? For some reason? This is strange.";
                 messages[0] = temp0;
                 //set the message after this dialogue is completed to nothing to stop dialogue at right place
-                temp1.message = "";
+                //instead of "", the final message is "Pass" to indicate to show the input box after the message in DialogueManager
+                temp1.message = "Pass";
                 messages[1] = temp1;
             }
             else if (select == 1)
             {
-                FindObjectOfType<DialogueManager>().End();
+                //FindObjectOfType<DialogueManager>().End();
                 temp0.name = "Capy";
                 temp0.message = "Wow it actually opened.";
                 messages[0] = temp0;
@@ -266,7 +267,7 @@ public class DialogueTrigger : MonoBehaviour
             }
             else if (select == 4)
             {
-                FindObjectOfType<DialogueManager>().End();
+                //FindObjectOfType<DialogueManager>().End();
                 temp0.name = "Capy";
                 temp0.message = "This smells even worse than the box.";
                 messages[0] = temp0;
@@ -279,12 +280,12 @@ public class DialogueTrigger : MonoBehaviour
             }
             else if (select == 10)
             {
-                FindObjectOfType<DialogueManager>().End();
+                //FindObjectOfType<DialogueManager>().End();
                 temp0.name = " ";
                 temp0.message = "Nothing happens, the password must be something else.";
                 messages[0] = temp0;
                 //set the message after this dialogue is completed to nothing to stop dialogue at right place
-                temp1.message = "";
+                temp1.message = "Pass";
                 messages[1] = temp1;
             }
         }
@@ -310,6 +311,8 @@ public class DialogueTrigger : MonoBehaviour
         FindObjectOfType<DialogueManager>().OpenDialogue(messages);
     }
 }
+
+
 
 [System.Serializable]
 public class Message
