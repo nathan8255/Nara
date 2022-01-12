@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Text messageText;
     public RectTransform backgroundBox;
     public GameObject inventory;
+    public PlayerInteract playerInteract;
 
     Message[] currentMessages;
     int activeMessage = 0;
@@ -40,6 +41,16 @@ public class DialogueManager : MonoBehaviour
             inventory.SetActive(true);
             //makes the UI invisible
             backgroundBox.transform.localScale = Vector3.zero;
+        }
+        else if (messageToDisplay.message.Equals("Pass"))
+        {
+            //if the final message is "Pass", then end the dialogue and show the pass input UI
+            Debug.Log("Conversation ended.");
+            isActive = false;
+            inventory.SetActive(true);
+            //makes the UI invisible
+            backgroundBox.transform.localScale = Vector3.zero;
+            FindObjectOfType<PlayerInteract>().OpenInputField();
         }
         else
         {
