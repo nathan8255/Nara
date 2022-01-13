@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -39,6 +40,12 @@ public class PlayerInteract : MonoBehaviour
             if(currentInterScript.inventory)
             {
                 inventory.AddItem(currentObject);
+            }
+
+            //check if object is an orange; if it is change to the win screen
+            if (currentInterScript.ifOrange)
+            {
+                SceneManager.LoadScene("WinScreen");
             }
 
 

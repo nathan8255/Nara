@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     //https://www.youtube.com/watch?v=6OT43pvUyfY&ab_channel=Brackeys
 
     public Sound[] sounds;
+    String scene;
 
     void Awake()
     {
@@ -25,7 +27,19 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("Convenience Theme");
+        scene = SceneManager.GetActiveScene().name;
+        if (scene.Equals("GameScene"))
+        {
+            Play("Convenience Theme");
+        }
+        else if (scene.Equals("WinScreen"))
+        {
+            Play("Win Theme");
+        }
+        else if (scene.Equals("TitleScene"))
+        {
+            Play("Title Theme");
+        }
     }
 
     public void Play (string name)

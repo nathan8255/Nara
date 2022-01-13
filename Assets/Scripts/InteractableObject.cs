@@ -18,6 +18,8 @@ public class InteractableObject : MonoBehaviour
     public bool gives3;
     //if true there's dialogue associated with the item (and nothing else)
     public bool ifDialogue;
+    //if true the item is an orange
+    public bool ifOrange;
     //if true a password is needed to interact with this item
     public bool password;
     //correct password 
