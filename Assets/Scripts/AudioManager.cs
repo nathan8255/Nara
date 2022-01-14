@@ -40,6 +40,10 @@ public class AudioManager : MonoBehaviour
         {
             Play("Title Theme");
         }
+        else if (scene.Equals("Barabar"))
+        {
+            Play("Barabar Theme");
+        }
     }
 
     public void Play (string name)
