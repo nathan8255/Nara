@@ -48,8 +48,14 @@ TagManager:
   - name: Foreground
     uniqueID: 1857198855
     locked: 0
+  - name: Writing
+    uniqueID: 2382221781
+    locked: 0
   - name: Capybara
     uniqueID: 2425974729
+    locked: 0
+  - name: In Front
+    uniqueID: 3349673215
     locked: 0
   - name: UI
     uniqueID: 4130836999

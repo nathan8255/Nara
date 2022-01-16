@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene().name;
-        if (scene.Equals("GameScene"))
+        if (scene.Equals("ConvenienceStore"))
         {
             Play("Convenience Theme");
         }

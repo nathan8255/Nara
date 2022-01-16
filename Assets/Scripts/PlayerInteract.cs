@@ -48,9 +48,49 @@ public class PlayerInteract : MonoBehaviour
                 SceneManager.LoadScene("WinScreen");
             }
 
-
+            //specific case where you need an item to to be able to input password into object
+            if (currentInterScript.openable && currentInterScript.password)
+            {
+                if (currentInterScript.locked1)
+                {
+                    //check if the inventory contains the neccesary object to unlock
+                    if (inventory.FindItem(currentInterScript.itemNeeded1))
+                    {
+                        //item was found
+                        currentInterScript.locked1 = false;
+                        Debug.Log(currentObject.name + " was unlocked");
+                        //this has been modifiyed for the one case in which we use it - where four items must be removed from inventory
+                        //if we wanted to further expand we would have to include some if statements and whatnot
+                        inventory.RemoveItem(currentInterScript.itemNeeded1);
+                        inventory.RemoveItem(currentInterScript.itemNeeded2);
+                        inventory.RemoveItem(currentInterScript.itemNeeded3);
+                        inventory.RemoveItem(currentInterScript.itemNeeded4);
+                        currentInterScript.Open(2);
+                        //if interaction gives an item, add said item to inventory
+                        if (currentInterScript.gives1)
+                        {
+                            inventory.AddItem(currentInterScript.itemGiven1);
+                        }
+                    }
+                    else
+                    {
+                        //if locked1 is true and the item was not found run default dialogue
+                        currentInterScript.Open(0);
+                        Debug.Log(currentObject.name + " was not unlocked, " + currentInterScript.itemNeeded1.name + " needed");
+                    }
+                }
+                else if (currentInterScript.locked2)
+                {
+                    //if locked2 is true, meaning password hasn't been inputted yet, play default dialogue
+                    currentInterScript.Open(4);
+                }
+                else
+                {
+                    currentInterScript.Open(5);
+                }
+            }
             //check if the object can be opened or has a special interaction
-            if (currentInterScript.openable)
+            else if (currentInterScript.openable)
             {
                 //check if the object is locked(1) or has yet to perform a special interaction
                 if (currentInterScript.locked1)

@@ -28,6 +28,7 @@ public class InteractableObject : MonoBehaviour
     public GameObject itemNeeded1 = null;
     public GameObject itemNeeded2 = null;
     public GameObject itemNeeded3 = null;
+    public GameObject itemNeeded4 = null;
     //item(s) given by item
     public GameObject itemGiven1 = null;
     public GameObject itemGiven2 = null;

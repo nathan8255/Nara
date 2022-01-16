@@ -13,17 +13,33 @@ public class PassTransfer : MonoBehaviour
     //gets the input from the input field and depending on the input, do something in response accordingly
     public void StoreInput()
     {
+        if (playerInteract.currentObject.name.Equals("Drink Mixer"))
+        {
+            FindObjectOfType<AudioManager>().Play("Drink Mixer");
+        }
         input = inputField.GetComponent<Text>().text;
         
         if (IsCorrect(playerInteract.currentInterScript.correctPass))
         {
-            playerInteract.currentInterScript.locked1 = false;
+            if (!playerInteract.currentInterScript.locked1)
+            {
+                playerInteract.currentInterScript.locked2 = false;
+            }
+            else
+            {
+                playerInteract.currentInterScript.locked1 = false;
+            }
+
             Exit();
             playerInteract.currentInterScript.Open(1);
 
             if (playerInteract.currentInterScript.gives1)
             {
                 playerInteract.inventory.AddItem(playerInteract.currentInterScript.itemGiven1);
+            }
+            else if (playerInteract.currentInterScript.gives2)
+            {
+                playerInteract.inventory.AddItem(playerInteract.currentInterScript.itemGiven2);
             }
         }
         else

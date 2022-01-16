@@ -298,6 +298,87 @@ public class DialogueTrigger : MonoBehaviour
             temp1.message = "";
             messages[1] = temp1;
         }
+        else if (name.Equals("Drink Mixer"))
+        {
+            if (select == 0)
+            {
+                temp0.name = "Capy";
+                temp0.message = "A drink mixer huh...";
+                messages[0] = temp0;
+                temp1.name = "Capy";
+                temp1.message = "I'll need something to mix to use this.";
+                messages[1] = temp1;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp2.message = "";
+                messages[2] = temp2;
+            }
+            else if (select == 1)
+            {
+                temp0.name = "Capy";
+                temp0.message = "Wow! That was actually pretty easy.";
+                messages[0] = temp0;
+                temp1.name = "Capy";
+                temp1.message = "You could call me a...";
+                messages[1] = temp1;
+                temp2.name = "Capy";
+                temp2.message = "Capybatender.";
+                messages[2] = temp2;
+                temp3.name = "Capy";
+                temp3.message = ":)";
+                messages[3] = temp3;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp4.message = "";
+                messages[4] = temp4;
+            }
+            else if (select == 2)
+            {
+                temp0.name = "Capy";
+                temp0.message = "Okay I have four drinks now.";
+                messages[0] = temp0;
+                temp1.name = "Capy";
+                temp1.message = "That sounds like a good amount I think.";
+                messages[1] = temp1;
+                temp2.name = "Capy";
+                temp2.message = "Lemme just open this...";
+                messages[2] = temp2;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp3.message = "";
+                messages[3] = temp3;
+            }
+            else if (select == 4)
+            {
+                temp0.name = "Capy";
+                temp0.message = "I'll try my best!";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp1.message = "Pass";
+                messages[1] = temp1;
+            }
+            else if (select == 5)
+            {
+                temp0.name = "Capy";
+                temp0.message = "Do you think they'd notice if I took this with me...";
+                messages[0] = temp0;
+                temp1.name = "Capy";
+                temp1.message = "I'm just so good at... capybatending...";
+                messages[1] = temp1;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp2.message = "";
+                messages[2] = temp2;
+            }
+            else if (select == 10)
+            {
+                temp0.name = "Capy";
+                temp0.message = "Something must have gone wrong because this doesn't look edible...";
+                messages[0] = temp0;
+                temp1.name = "Capy";
+                temp1.message = "Let's try this again.";
+                messages[1] = temp1;
+                //put better comment here 
+                temp2.message = "Pass";
+                messages[2] = temp2;
+            }
+        }
         else if (select == 100)
         {
             temp0.name = " ";

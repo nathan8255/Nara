@@ -7,7 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("ConvenienceStore");
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene("Barabar");
     }
 
     public void ExitGame ()
