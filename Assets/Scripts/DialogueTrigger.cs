@@ -323,8 +323,8 @@ public class DialogueTrigger : MonoBehaviour
                 temp2.name = "Capy";
                 temp2.message = "Capybatender.";
                 messages[2] = temp2;
-                temp3.name = "Capy";
-                temp3.message = ":)";
+                temp3.name = " ";
+                temp3.message = "Mixed Drink was added to inventory.";
                 messages[3] = temp3;
                 //set the message after this dialogue is completed to nothing to stop dialogue at right place
                 temp4.message = "";
@@ -378,6 +378,70 @@ public class DialogueTrigger : MonoBehaviour
                 temp2.message = "Pass";
                 messages[2] = temp2;
             }
+        }
+        else if (name.Equals("Blender"))
+        {
+            if (select == 0)
+            {
+                temp0.name = "Capy";
+                temp0.message = "Looks like I can open this if I never need to blend something.";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place 
+                temp1.message = "";
+                messages[1] = temp1;
+            }
+            else if (select == 1)
+            {
+                FindObjectOfType<AudioManager>().Play("Blender");
+                temp0.name = " ";
+                temp0.message = "Capy dumps the drink in the blender and puts it on high speed.";
+                messages[0] = temp0;
+                temp1.name = " ";
+                temp1.message = "For some reason that defies physics as you know it, the drink turns into a... key?";
+                messages[1] = temp1;
+                temp2.name = " ";
+                temp2.message = "Purple Key was added to inventory.";
+                messages[2] = temp2;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp3.message = "";
+                messages[3] = temp3;
+            }
+            else if (select == 4)
+            {
+                temp0.name = "Capy";
+                temp0.message = "Bzzz bzzz...";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place 
+                temp1.message = "";
+                messages[1] = temp1;
+            }
+        }
+        else if (name.Equals("Drink Formats Poster"))
+        {
+            temp0.name = "Capy";
+            temp0.message = "So this is how barabartenders makes drinks?";
+            messages[0] = temp0;
+            temp1.name = "Capy";
+            temp1.message = "This seems incredible impractical...";
+            messages[1] = temp1;
+            //set the message after this dialogue is completed to nothing to stop dialogue at right place
+            temp2.message = "";
+            messages[2] = temp2;
+        }
+        else if (name.Equals("Computer"))
+        {
+            temp0.name = " ";
+            temp0.message = "You press the power button, but nothing seems to happen.";
+            messages[0] = temp0;
+            temp1.name = "Capy";
+            temp1.message = "I'm not the most adept at technology stuff but I think I could press a power button.";
+            messages[1] = temp1;
+            temp2.name = "Capy";
+            temp2.message = "Guess this thing just doesn't work.";
+            messages[2] = temp2;
+            //set the message after this dialogue is completed to nothing to stop dialogue at right place
+            temp3.message = "";
+            messages[3] = temp3;
         }
         else if (select == 100)
         {
