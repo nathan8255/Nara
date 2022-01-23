@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12978445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.26, y: -3.98, z: 0}
+  m_LocalPosition: {x: 5.66, y: 1.23, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1589,7 +1589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350973201}
   m_LocalRotation: {x: -0, y: -0, z: 0.9350417, w: 0.3545378}
-  m_LocalPosition: {x: -5.39, y: -3.61, z: 0}
+  m_LocalPosition: {x: 5.7, y: 1.2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1966,7 +1966,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.40327263, y: 0.107963935}
+  m_Offset: {x: 0.41188794, y: 0.10796392}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1977,7 +1977,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17880046, y: 0.78407216}
+  m_Size: {x: 0.1615698, y: 0.78407216}
   m_EdgeRadius: 0
 --- !u!1 &406924676
 GameObject:
@@ -3285,7 +3285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941779458}
   m_LocalRotation: {x: -0, y: -0, z: -0.08968258, w: 0.9959704}
-  m_LocalPosition: {x: -6.69, y: -4.05, z: 0}
+  m_LocalPosition: {x: 4.27, y: 1.53, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3344,6 +3344,24 @@ MonoBehaviour:
   - name: Convenience Theme
     loop: 1
     clip: {fileID: 8300000, guid: 828a9de3f5826e34ca2d85e9243e3129, type: 3}
+    volume: 0.55
+    pitch: 1
+    source: {fileID: 0}
+  - name: Whoop
+    loop: 0
+    clip: {fileID: 8300000, guid: 319157de9ca7de84d95558fcf8009c2f, type: 3}
+    volume: 0.55
+    pitch: 1
+    source: {fileID: 0}
+  - name: Vendy Jingle
+    loop: 0
+    clip: {fileID: 8300000, guid: b9bf1b920a8282548b8afe3acd116fc3, type: 3}
+    volume: 0.55
+    pitch: 1
+    source: {fileID: 0}
+  - name: Explode
+    loop: 0
+    clip: {fileID: 8300000, guid: 4f2808a5e9de46e4fbd38dff39f2e545, type: 3}
     volume: 0.55
     pitch: 1
     source: {fileID: 0}
@@ -5099,7 +5117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602610462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.014, y: -4.217, z: 0}
+  m_LocalPosition: {x: 5.74, y: 1.17, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 0}

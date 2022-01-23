@@ -69,7 +69,7 @@ public class DialogueTrigger : MonoBehaviour
                 temp4.message = "How lovely! Please insert your coin so I can thank you for your service properly!!";
                 messages[4] = temp4;
                 temp5.name = " ";
-                temp5.message = "Some grape juice falls down, but you her an odd clanging noise when it hits the floor.";
+                temp5.message = "Some grape juice falls down, but you hear an odd clanging noise when it hits the floor.";
                 messages[5] = temp5;
                 temp6.name = " ";
                 temp6.message = "Opening the can it smells just as bad as expected, but you find a key inside!";
@@ -106,7 +106,7 @@ public class DialogueTrigger : MonoBehaviour
                 temp5.message = "Please insert your coin to redeem this fantastic offer!";
                 messages[5] = temp5;
                 temp6.name = " ";
-                temp6.message = "Two cans of grape juice fall down. Ones the same as all the others but the other one...";
+                temp6.message = "Two cans of grape juice fall down. One is the same as all the others but the other one...";
                 messages[6] = temp6;
                 temp7.name = " ";
                 temp7.message = "You toss the normal can to the side and place the other near Vendy.";
