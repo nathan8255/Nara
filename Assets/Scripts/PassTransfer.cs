@@ -11,6 +11,8 @@ public class PassTransfer : MonoBehaviour
     public PlayerInteract playerInteract;
 
     //gets the input from the input field and depending on the input, do something in response accordingly
+    //math answer: 845
+    //drink mix answer: 2G5P3B4R
     public void StoreInput()
     {
         if (playerInteract.currentObject.name.Equals("Drink Mixer"))

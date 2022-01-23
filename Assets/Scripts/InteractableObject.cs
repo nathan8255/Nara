@@ -22,6 +22,8 @@ public class InteractableObject : MonoBehaviour
     public bool ifOrange;
     //if true a password is needed to interact with this item
     public bool password;
+    //set to true when the light are on in the barabar, and false when the lights are off
+    public bool lightsOn;
     //correct password 
     public string correctPass;
     //item(s) needed to interact with this item

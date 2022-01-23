@@ -8,6 +8,7 @@ public class BackgroundChange : MonoBehaviour
     public GameObject currentBack;
     public GameObject newBack;
     public GameObject newInteraction;
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,4 +24,6 @@ public class BackgroundChange : MonoBehaviour
             }
         }
     }
+
+    
 }
