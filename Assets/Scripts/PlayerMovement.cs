@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,13 +14,18 @@ public class PlayerMovement : MonoBehaviour
     public bool facingRight; //capy is facing right by default
     float horizontalMove = 0f;
     Vector2 movement;
+    Scene currentScene;
+
+    void Start()
+    {
+        currentScene = SceneManager.GetActiveScene();
+    }
 
     void Update()
     {
         //if the player is currently in a dialogue interaction don't let them move capy around
-        if (DialogueManager.isActive || FindObjectOfType<PlayerInteract>().ifPass)
+        if (DialogueManager.isActive || FindObjectOfType<PlayerInteract>().ifPass )
         {
-            
             return;
         }
 
@@ -46,8 +52,34 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //if the player is currently in a dialogue interaction, stop capy and don't let them move capy around
-        if (DialogueManager.isActive) rb.velocity = movement*0;
-        else rb.velocity = movement * moveSpeed;
+        //if dialogue is not active, and if the lights are off in barabar, stop capy from moving. otherwise, let capy move
+
+        if (DialogueManager.isActive || FindObjectOfType<PlayerInteract>().ifPass)
+        {
+            rb.velocity = movement * 0;
+            
+        }
+        else 
+        {
+            rb.velocity = movement * moveSpeed;
+            if (currentScene.name.Equals("Barabar"))
+            {
+                if (FindObjectOfType<LightsOnOff>().lightsOff.activeSelf)
+                {
+                    rb.velocity = movement * 0;
+                }
+                else
+                {
+                    rb.velocity = movement * moveSpeed;
+                }
+            }
+        }
+
+       
+
+        
+        
+        
     }
 
     void MovementInput()

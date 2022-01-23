@@ -12,11 +12,25 @@ public class PlayerInteract : MonoBehaviour
     public PassTransfer passTransfer;
     public GameObject inputField;
     public InputField inputFieldText;
+    Scene currentScene;
 
     public bool ifPass = false;
 
     void Update()
     {
+        //check if the lights are off in barabar, and register any "Interact" input as turning the lights back on.
+        //capy sometimes cannot interact with an object without leaving and reentering the boxcollider sometimes, 
+        //and since capy stands still when lights are off, this helps to avoid bugs
+        if (currentScene.name.Equals("Barabar"))
+        {
+            if ((Input.GetButtonDown("Interact") && FindObjectOfType<LightsOnOff>().lightsOff.activeSelf && DialogueManager.isActive))
+            {
+                currentInterScript.Open(10);
+                FindObjectOfType<LightsOnOff>().TurnLightsOn();
+            }
+        }
+        
+        //if there is an Interact input, and if there is a currentObject, and if a passcode isn't beinging inputted
         if (Input.GetButtonDown ("Interact") && currentObject && !ifPass)
         {
             /*
@@ -46,6 +60,7 @@ public class PlayerInteract : MonoBehaviour
             if (currentInterScript.ifOrange)
             {
                 SceneManager.LoadScene("WinScreen");
+                return;
             }
 
             //specific case where you need an item to to be able to input password into object
@@ -175,6 +190,21 @@ public class PlayerInteract : MonoBehaviour
                     currentInterScript.Open(4);
                 }
             }
+            else if (currentInterScript.lightsOn)
+            {
+                //check if the lights are on or off, and then turn them off or on and play dialogue accordingly
+                if(!FindObjectOfType<LightsOnOff>().lightsOff.activeSelf)
+                {
+                    currentInterScript.Open(0);
+                    FindObjectOfType<LightsOnOff>().TurnLightsOff();
+                }
+                else if (FindObjectOfType<LightsOnOff>().lightsOff.activeSelf)
+                {
+                    currentInterScript.Open(1);
+                    FindObjectOfType<LightsOnOff>().TurnLightsOn();
+                }
+            }
+            
             currentObject.SendMessage("DoInteraction");
         }
     }
@@ -190,6 +220,7 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
         inputField.SetActive(false);
+        currentScene = SceneManager.GetActiveScene();
     }
 
     void OnTriggerEnter2D(Collider2D other)
