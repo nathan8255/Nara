@@ -535,6 +535,15 @@ public class DialogueTrigger : MonoBehaviour
                 }
                 break;
 
+            case ("Ladder"):
+                temp0.name = "Capy";
+                temp0.message = "A conveniently-placed, capybara-safe ladder to get to the countertop. Huh.";
+                messages[0] = temp0;
+                //set the message after this dialogue is completed to nothing to stop dialogue at right place
+                temp1.message = "";
+                messages[1] = temp1;
+                break;
+
             default:
                 break;
             }
