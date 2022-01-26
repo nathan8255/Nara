@@ -361,7 +361,7 @@ public class DialogueTrigger : MonoBehaviour
                     temp1.message = "That sounds like a good amount I think.";
                     messages[1] = temp1;
                     temp2.name = "Capy";
-                    temp2.message = "Lemme just open this...";
+                    temp2.message = "Looks like there's a poster with drink formats beside me, but how am I supposed to figure out the right recipe???";
                     messages[2] = temp2;
                     //set the message after this dialogue is completed to nothing to stop dialogue at right place
                     temp3.message = "";

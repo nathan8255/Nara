@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    //https://www.youtube.com/watch?v=gGUtoy4Knnw&list=PLa5_l08N9jzM7s58ly3K5ZXYypX8AyWiS&ab_channel=ScriptingIsFun
+
     //if true object can be added to inventory
     public bool inventory;
     //if true object is openable or has a special interaction

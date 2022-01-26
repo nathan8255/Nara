@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteract : MonoBehaviour
 {
+    //https://www.youtube.com/watch?v=gGUtoy4Knnw&list=PLa5_l08N9jzM7s58ly3K5ZXYypX8AyWiS&ab_channel=ScriptingIsFun
+
     public GameObject currentObject = null;
     public InteractableObject currentInterScript = null;
     public Inventory inventory;
@@ -33,23 +35,6 @@ public class PlayerInteract : MonoBehaviour
         //if there is an Interact input, and if there is a currentObject, and if a passcode isn't beinging inputted
         if (Input.GetButtonDown ("Interact") && currentObject && !ifPass)
         {
-            /*
-             * set up a shit ton of bools
-             * change the start dialogue to include an int or something that selects the interaction
-             * also have posibility for multiple locked variables (looks at vending machine...)
-             * have it do the inventory stuff in here and then call the startDialogue method with the object name and the int seleciton; change open method to do this
-             * eg. if you interact with the vending machine and you don't have the coin: currentInterScript.Open(0) [open has name in it already]
-             * but if you do have the coin, turn of locked1 and pass: currentInterScript.Open(1)
-             * in the dialogueTrigger method it will take in the object name as usual, but also the selection variable 
-             * instead of checking for all the shit in there just have it do the appropriate dialogue for the situation decided in this script
-             * 
-             * further example - for the box if don't have the key do nothing in here and display "i wish i had a key": currentInterScript.Open(0)
-             * if you do have the key add the coin in here, turn off locked and pass: currentInterScript.Open(1)
-             * oh yeah also put animation in Open() for 1 and all that 
-             * 
-             * CLEAN THIS SHIT UP ALSO THERE'S SO MUCH UNESSECARY SHIT IN THESE SCRIPTS NOW LOLO
-             */
-
             //check if object is to be storied in inventory
             if(currentInterScript.inventory)
             {

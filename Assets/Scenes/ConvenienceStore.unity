@@ -328,6 +328,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 0
   password: 1
+  lightsOn: 0
   correctPass: 845
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -944,6 +945,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -1265,6 +1267,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 191731893}
   itemNeeded2: {fileID: 192808342}
@@ -1883,6 +1886,7 @@ MonoBehaviour:
   ifDialogue: 1
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -2350,6 +2354,7 @@ MonoBehaviour:
   ifDialogue: 1
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -3044,6 +3049,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -3450,7 +3456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018441041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.25, y: -3.55, z: 0}
+  m_LocalPosition: {x: -9.8, y: -3.88, z: 0}
   m_LocalScale: {x: 0.5741646, y: 0.5741646, z: 0.5741646}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3479,6 +3485,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -4183,6 +4190,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -5058,6 +5066,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 1
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 0}
   itemNeeded2: {fileID: 0}
@@ -5530,6 +5539,7 @@ MonoBehaviour:
   ifDialogue: 0
   ifOrange: 0
   password: 0
+  lightsOn: 0
   correctPass: 
   itemNeeded1: {fileID: 918434481}
   itemNeeded2: {fileID: 1018441041}

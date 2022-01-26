@@ -2268,7 +2268,7 @@ MonoBehaviour:
   itemGiven1: {fileID: 0}
   itemGiven2: {fileID: 0}
   itemGiven3: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 718089376}
 --- !u!114 &718089376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2281,9 +2281,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e60d5db0dc4034892736a7578f6363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages: []
+  messages:
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
+  - name: 
+    message: 
   animator: {fileID: 0}
-  currentInterScript: {fileID: 718089375}
+  currentInterScript: {fileID: 0}
   inputField: {fileID: 0}
 --- !u!4 &718089377
 Transform:

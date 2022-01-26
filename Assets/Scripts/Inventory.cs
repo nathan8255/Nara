@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [SerializeField]
 public class Inventory : MonoBehaviour
 {
+    //https://www.youtube.com/watch?v=gGUtoy4Knnw&list=PLa5_l08N9jzM7s58ly3K5ZXYypX8AyWiS&ab_channel=ScriptingIsFun
+
     [SerializeField]
     public GameObject[] inventory = new GameObject[8];
     public Button[] InventorySlots = new Button[8];

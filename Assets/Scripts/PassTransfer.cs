@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PassTransfer : MonoBehaviour
 {
+    //https://www.youtube.com/watch?v=zc8ac_qUXQY&ab_channel=Brackeys
+
     public string input;
     public GameObject canvas;
     public GameObject inputField;
@@ -62,6 +65,6 @@ public class PassTransfer : MonoBehaviour
     public bool IsCorrect(string correct)
     {
         input = input.Replace(" ", "");
-        return correct.Equals(input);
+        return correct.Equals(input, StringComparison.OrdinalIgnoreCase);
     }
 }
